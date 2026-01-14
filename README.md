@@ -9,4 +9,18 @@ Even though it is a pretty simple and straightforward solution, there are a few 
 
 4. I created two methods for number addition. Users can either add one number or multiple ones at a time. It is also possible to add one number using the AddNumbers method, but it would lead to some awkwardness, because it would require the implementer to write something like `AddNumbers(new[] { 5.0 })`.
 
-5. Finally, mathematically, the average of nothing is undefined. It could return 0, but I thought it would be misleading. Hence the exception thrown.
+5. Mathematically, the average of nothing is undefined. It could return 0, but I thought it would be misleading. Hence the exception thrown.
+
+6. Finally, the Program class doens't expect any user's input via CLI, so it will only output the average of the hardcoded values. In future iterations, the program could expect some custom input from users, but for this first implementation, I judged it an overreach.
+
+The project was built by running:
+
+```bash
+dotnet new console --lang C#
+```
+
+Which means you can run it locally with (as long as you have dotnet SDK installed):
+
+```bash
+dotnet run
+```

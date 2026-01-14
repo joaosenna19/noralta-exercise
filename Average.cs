@@ -1,31 +1,29 @@
 public class Average
 {
-    private readonly List<double> numbers;
-
-    public Average()
-    {
-        numbers = [];
-    }
+    private double sum;
+    private int count;
 
     public void AddNumber(double num)
     {
-
-        numbers.Add(num);
+        sum += num;
+        count++;
     }
 
     public void AddNumbers(IEnumerable<double> nums)
     {
-        numbers.AddRange(nums);
+        foreach (var num in nums)
+        {
+            AddNumber(num);
+        }
     }
 
     public double GetAverage()
     {
-        if (numbers.Count == 0)
+        if (count == 0)
         {
             throw new InvalidOperationException("No numbers added to calculate average.");
         }
 
-        return numbers.Average();
+        return sum / count;
     }
-
 }
