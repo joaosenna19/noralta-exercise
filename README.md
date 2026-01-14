@@ -24,3 +24,9 @@ Which means you can run it locally with (as long as you have dotnet SDK installe
 ```bash
 dotnet run
 ```
+
+Tests can be run with:
+
+```bash
+dotnet test
+```
